@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!------------------Titles------------------------->
+    <title>EVENX</title>
+    <meta name="title" content="EVENX">
+    <!--------------Links---------------->
+    <link rel="shortcut icon" href="favicon.svg" type="svg">
+    <!-----fonts links----->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
+    <!-----css link----->
+    <link rel="stylesheet" href="style.css">
+    <!-----preload images links----->
+    <link rel="preload" as="image" href="/assets/images/hero-slider-1.jpg">
+    <link rel="preload" as="image" href="/assets/images/hero-slider-2.jpg">
+    <link rel="preload" as="image" href="/assets/images/hero-slider-3.jpg">
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" type="text/javascript" ></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" type="text/javascript"></script>
+
+<body id="top">
+
+
+
+    <!--preloader-->
+    <div class="preload" data-preload>
+        <div class="circle"></div>
+        <p class="text">EVENX</p>
+    </div>
+    
+
+
+    <!--top bar-->
+    <div class="topbar text-center">
+        <a href="#" class="logo" style="display: flex; align-items: center; justify-content: center; gap: 10px; margin: auto;">
+            <img src="./assets/images/evenxwhitelogo.png" width="25" height="25" alt="EVENX">
+            <h1 class="outline-text">EVENX - TEMPLATE VERSION</h1>
+        </a>
+    </div>
+
+
+
+    <!--header-->
+    <header class="header" data-header>
+        <div class="container">
+            <nav class="navbar" data-navbar>
+                <button class="close-btn" aria-label="close menu" data-nav-toggler>
+                    <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+                </button>
+                <a href="#" class="logo">
+                    <img src="./assets/images/Evenx_Logo-03.png" width="50" height="50" alt="EVENX">
+                </a>
+                <ul class="navbar-list">
+                    <li class="navbar-item">
+                        <a href="#home" class="navbar-link hover-underline" data-nav-link>
+                            <div class="separator"></div>
+                            <span class="span">Home</span>
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#services" class="navbar-link hover-underline" data-nav-link>
+                            <div class="separator"></div>
+                            <span class="span">Services</span>
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#partners" class="navbar-link hover-underline" data-nav-link>
+                            <div class="separator"></div>
+                            <span class="span">Partners</span>
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#contact" class="navbar-link hover-underline" data-nav-link>
+                            <div class="separator"></div>
+                            <span class="span">Contact</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="text-center">
+                    <p class="headline-1 navbar-title outline-text">EVENX</p>
+                    <address class="body-4">evenx address here</address>
+                    <a href="mailto:booking@evenx.com" class="body-4 sidebar-link">email@evenx.ae here</a>
+                    <a href="tel:+8801675464308" class="body-1 contact-number hover-underline">contact number here</a>
+                </div>
+            </nav>
+            <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+                <span class="line line-1"></span>
+                <span class="line line-2"></span>
+                <span class="line line-3"></span>
+            </button>
+            <div class="overlay" data-nav-toggler data-overlay></div>
+        </div>
+    </header>
+    <!--header end-->
+
+
+ 
+<main>
+    <article>
+
+    <!--hero section-->
+    <section class="hero text-center" aria-label="home" id="home">
+        <ul class="hero-slider" data-hero-slider>
+            <li class="slider-item active" data-hero-slider-item>
+                <div class="slider-bg">
+                    <img src="./assets/images/bg1.png" width="1880" height="950" alt="" class="img-cover">
+                </div>
+                <h1 class="display-1 hero-title slider-reveal">WE ARE<br><span class="outline-text" style="-webkit-text-stroke: 1px var(--gold-crayola);">EVENX</span></h1>
+                <p class="body-2 hero-text slider-reveal">A regional event and production company creating immersive experiences through events, exhibitions, cinematic content, branding, and social media.<br>We turn ideas into impactful realities with 360° creative solutions across the region.</p>
+                <a href="#services" class="btn btn-primary slider-reveal">
+                    <span class="text text-1">View Our Services</span>
+                    <span class="text text-2" aria-hidden="true">View Our Services</span>
+                </a>
+            </li>
+            <li class="slider-item" data-hero-slider-item>
+                <div class="slider-bg">
+                    <img src="./assets/images/bg2.png" width="1880" height="950" alt="" class="img-cover">
+                </div>
+                <h1 class="display-1 hero-title slider-reveal">WE PRODUCTIVELY<br><span class="outline-text" style="-webkit-text-stroke: 1px var(--gold-crayola);">DELIVER</span></h1>
+                <p class="body-2 hero-text slider-reveal">At Evenx, we turn ideas into reality through events, campaigns, mockups, branding, and cinematic productions.<br><br>From concept to outreach, we create impactful experiences through media, marketing, and storytelling across the region.</p>
+                <a href="#services" class="btn btn-primary slider-reveal">
+                    <span class="text text-1">View Our Services</span>
+                    <span class="text text-2" aria-hidden="true">View Our Services</span>
+                </a>
+            </li>
+        </ul>
+        <button class="slider-btn prev" aria-label="slide to previous" data-prev-btn>
+            <ion-icon name="chevron-back"></ion-icon>
+        </button>
+        <button class="slider-btn next" aria-label="slide to next" data-next-btn>
+            <ion-icon name="chevron-forward"></ion-icon>
+        </button>
+    </section>
+    <!--hero section end-->
+
+
+
+    <!--services-->
+    <section class="section service text-center has-bg-image" aria-label="service" style="background-image: url(./assets/images/pattern.png)">
+        <div class="container">
+            <p class="section-subtitle label-2">WE CATER END TO END SOLUTIONS</p>
+            <h2 class="headline-1 section-title">OUR <span class="outline-text">SERVICES</span></h2>
+            <p class="section-text">With a <span class="outline-text">SENIOR TEAM</span> driven by passion and experience, we create for the world… producing with intelligence, creativity, and purpose.</p>
+            <ul class="grid-list">
+                <li>
+                    <div class="service-card">
+                        <a href="" class="has-before hover:shine">
+                            <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
+                            <img src="./assets/images/services1.png" width="285" height="336" loading="lazy" alt="Events Production" class="img-cover">
+                        </figure>
+                        </a>
+                        <div class="card-container">
+                            <h3 class="title-4 card-titile">
+                                <a href="">Event Production</a>
+                            </h3>
+                            <a href="#services" class="btn-text hover-underline label-2">View Services</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="service-card">
+                        <a href="" class="has-before hover:shine">
+                            <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
+                            <img src="./assets/images/services1.png" width="285" height="336" loading="lazy" alt="Exhibition and Stands" class="img-cover">
+                        </figure>
+                        </a>
+                        <div class="card-container">
+                            <h3 class="title-4 card-titile">
+                                <a href="">Exhibition and Stands</a>
+                            </h3>
+                            <a href="#services" class="btn-text hover-underline label-2">View Services</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="service-card">
+                        <a href="" class="has-before hover:shine">
+                            <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
+                            <img src="./assets/images/services1.png" width="285" height="336" loading="lazy" alt="POSM Experiences" class="img-cover">
+                        </figure>
+                        </a>
+                        <div class="card-container">
+                            <h3 class="title-4 card-titile">
+                                <a href="">POSM Experiences</a>
+                            </h3>
+                            <a href="#services" class="btn-text hover-underline label-2">View Services</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!--service section end-->
+
+
+
+    <!--partners-->
+    <section class="section service bg-black-10 text-center" aria-labelledby="about-label" id="partners">
+        <div class="container">
+            <h2 class="headline-1 section-title">OUR REGIONAL<span class="outline-text"><br> PARTNERS</span></h2>
+		<div class="container">
+			<section class="customer-logos slider">
+				<div class="slide"><img src="./assets/images/arieltest.png"></div>
+                <div class="slide"><img src="./assets/images/arieltest.png"></div>
+                <div class="slide"><img src="./assets/images/arieltest.png"></div>
+                <div class="slide"><img src="./assets/images/arieltest.png"></div>
+                <div class="slide"><img src="./assets/images/arieltest.png"></div>
+                <div class="slide"><img src="./assets/images/arieltest.png"></div>
+                <div class="slide"><img src="./assets/images/arieltest.png"></div>
+                <div class="slide"><img src="./assets/images/arieltest.png"></div>
+                <div class="slide"><img src="./assets/images/arieltest.png"></div>
+                <div class="slide"><img src="./assets/images/arieltest.png"></div>
+			</section>
+		</div>
+
+		<div class="container" style="margin-top: 40px;">
+			<section class="customer-logos slider">
+				<div class="slide"><img src="./assets/images/arieltest.png"></div>
+                <div class="slide"><img src="./assets/images/arieltest.png"></div>
+                <div class="slide"><img src="./assets/images/arieltest.png"></div>
+                <div class="slide"><img src="./assets/images/arieltest.png"></div>
+                <div class="slide"><img src="./assets/images/arieltest.png"></div>
+                <div class="slide"><img src="./assets/images/arieltest.png"></div>
+                <div class="slide"><img src="./assets/images/arieltest.png"></div>
+                <div class="slide"><img src="./assets/images/arieltest.png"></div>
+                <div class="slide"><img src="./assets/images/arieltest.png"></div>
+                <div class="slide"><img src="./assets/images/arieltest.png"></div>
+			</section>
+		</div>
+
+        
+</div>
+        </div>
+    </section>
+    <!--about partners end-->
+
+
+    <!--services-->
+    <section class="section menu has-bg-image text-center" aria-label="menu-label" id="services" style="background-image: url(./assets/images/pattern.png)">
+        <div class="container">
+            <h2 class="headline-1 section-title text-center">SERVICES</h2>
+    
+    <!--image carousel section-->
+    <section class="carousel-section" aria-label="image gallery" id="gallery">
+        <div class="carousel-container">
+            <div class="carousel-wrapper">
+                <div class="carousel-track" data-carousel-track>
+                    <div class="carousel-slide active" data-carousel-slide>
+                        <div class="carousel-image-wrapper">
+                            <img src="./assets/images/serviceimg.png" alt="Event Showcase 1" class="carousel-image">
+                        </div>
+                        <div class="carousel-caption">
+                            <h3 class="carousel-title">EVENT <span class="outline-text">PRODUCTION</span></h3>
+                            <p class="carousel-description"><strong>For over 12 years</strong>, we have been producing with <strong>passion</strong> through our <strong>in-house factories and creative teams.</strong></p>
+                            <p class="carousel-description">description here.</p>
+
+                        </div>
+                    </div>
+                    <div class="carousel-slide" data-carousel-slide>
+                        <div class="carousel-image-wrapper">
+                            <img src="./assets/images/serviceimg.png" alt="Event Showcase 2" class="carousel-image">
+                        </div>
+                        <div class="carousel-caption">
+                            <h3 class="carousel-title">TITLE <span class="outline-text">BRENT</span></h3>
+                            <p class="carousel-description"><strong>strong description</strong></p>
+                            <p class="carousel-description">description here.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide" data-carousel-slide>
+                        <div class="carousel-image-wrapper">
+                            <img src="./assets/images/serviceimg.png" alt="Event Showcase 3" class="carousel-image">
+                        </div>
+                        <div class="carousel-caption">
+                            <h3 class="carousel-title">TITLE <span class="outline-text">BRENT</span></h3>
+                            <p class="carousel-description"><strong>strong description</strong></p>
+                            <p class="carousel-description">description here.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide" data-carousel-slide>
+                        <div class="carousel-image-wrapper">
+                            <img src="./assets/images/serviceimg.png" alt="Event Showcase 4" class="carousel-image">
+                        </div>
+                        <div class="carousel-caption">
+                            <h3 class="carousel-title">TITLE <span class="outline-text">BRENT</span></h3>
+                            <p class="carousel-description"><strong>strong description</strong></p>
+                            <p class="carousel-description">description here.</p>
+                        </div>
+                    </div>
+                                        <div class="carousel-slide" data-carousel-slide>
+                        <div class="carousel-image-wrapper">
+                            <img src="./assets/images/serviceimg.png" alt="Event Showcase 5" class="carousel-image">
+                        </div>
+                        <div class="carousel-caption">
+                            <h3 class="carousel-title">TITLE <span class="outline-text">BRENT</span></h3>
+                            <p class="carousel-description"><strong>strong description</strong></p>
+                            <p class="carousel-description">description here.</p>
+                        </div>
+                    </div>
+                                        <div class="carousel-slide" data-carousel-slide>
+                        <div class="carousel-image-wrapper">
+                            <img src="./assets/images/serviceimg.png" alt="Event Showcase 6" class="carousel-image">
+                        </div>
+                        <div class="carousel-caption">
+                            <h3 class="carousel-title">TITLE <span class="outline-text">BRENT</span></h3>
+                            <p class="carousel-description"><strong>strong description</strong></p>
+                            <p class="carousel-description">description here.</p>
+                        </div>
+                    </div>
+                                        <div class="carousel-slide" data-carousel-slide>
+                        <div class="carousel-image-wrapper">
+                            <img src="./assets/images/serviceimg.png" alt="Event Showcase 7" class="carousel-image">
+                        </div>
+                        <div class="carousel-caption">
+                            <h3 class="carousel-title">TITLE <span class="outline-text">BRENT</span></h3>
+                            <p class="carousel-description"><strong>strong description</strong></p>
+                            <p class="carousel-description">description here.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--carousel navigation dots-->
+            <div class="carousel-dots" data-carousel-dots>
+                <button class="dot active" data-dot="0" aria-label="Go to slide 1"></button>
+                <button class="dot" data-dot="1" aria-label="Go to slide 2"></button>
+                <button class="dot" data-dot="2" aria-label="Go to slide 3"></button>
+                <button class="dot" data-dot="3" aria-label="Go to slide 4"></button>
+                <button class="dot" data-dot="4" aria-label="Go to slide 5"></button>
+                <button class="dot" data-dot="5" aria-label="Go to slide 6"></button>
+                <button class="dot" data-dot="6" aria-label="Go to slide 7"></button>
+            </div>
+
+            <!--carousel controls-->
+            <button class="carousel-btn carousel-prev" aria-label="Previous slide" data-carousel-prev>
+                <ion-icon name="chevron-back-outline"></ion-icon>
+            </button>
+            <button class="carousel-btn carousel-next" aria-label="Next slide" data-carousel-next>
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+            </button>
+        </div>
+    </section>
+    <!--image carousel section end-->
+            
+        </div>
+    </section>
+    <!--menu section end-->
+
+
+
+    </article>
+</main>
+
+
+
+    <!--footer section-->
+    <footer class="footer section has-bg-image text-center" style="background-image: url('footer-bg.jpg')" id="contact">
+        <div class="container">
+            <div class="footer-top grid-list">
+                <div class="footer-brand has-before has-after">
+                    <a href="#" class="logo">
+                        <img src="./assets/images/Evenx_Logo-03.png" width="60" height="60" loading="lazy" alt="EVENX">
+                    </a>
+                    <address class="body-4">address here</address>
+                    <a href="mailto:booking@evenx.com" class="body-4 contact-link">emailhere@evenx.ae</a>
+                    <a href="tel:+8801675464308" class="body-4 contact-link">contact number here</a>
+                    <div class="wrapper">
+                        <div class="separator"></div>
+                        <div class="separator"></div>
+                        <div class="separator"></div>
+                    </div>
+                </div>
+                <ul class="footer-list">
+                    <li>
+                        <a href="#home" class="label-2 footer-link hover-underline">Home</a>
+                    </li>
+                    <li>
+                        <a href="#services" class="label-2 footer-link hover-underline">Services</a>
+                    </li>
+                    <li>
+                        <a href="#partners" class="label-2 footer-link hover-underline">Partners</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="label-2 footer-link hover-underline">Contact</a>
+                    </li>
+                </ul>
+                <ul class="footer-list">
+                    <li>
+                        <a href="" class="label-2 footer-link hover-underline">Instagram</a>
+                    </li>
+
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">
+                    &copy; 2026 EVENX. All Rights Reserved.</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!--footer section end-->
+
+
+
+    <!--back to top button-->
+    <a href="#top" class="back-top-btn active" aria-label="back to top" data-back-top-btn>
+        <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+    </a>
+
+    
+
+
+
+<!-----scripts links----->
+<script src="script.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.customer-logos').slick({
+				slidesToShow: 8,
+				slidesToScroll: 1,
+				autoplay: true,
+				autoplaySpeed: 1000,
+				arrows: false,
+				dots: false,
+				pauseOnHover: false,
+				responsive: [{
+					breakpoint: 1024,
+					settings: {
+						slidesToShow: 6
+					}
+				}, {
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 4
+					}
+				}, {
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 2
+					}
+				}]
+			});
+		});
+	</script>
+</body>
+</html>
