@@ -7,7 +7,7 @@
     <title>EVENX</title>
     <meta name="title" content="EVENX">
     <!--------------Links---------------->
-    <link rel="shortcut icon" href="favicon.svg" type="svg">
+    <link rel="shortcut icon" href="./assets/images/evenxwhitelogo.png" type="png">
     <!-----fonts links----->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,7 +42,7 @@
     <div class="topbar text-center">
         <a href="#" class="logo" style="display: flex; align-items: center; justify-content: center; gap: 10px; margin: auto;">
             <img src="./assets/images/evenxwhitelogo.png" width="25" height="25" alt="EVENX">
-            <h1 class="outline-text">EVENX - TEMPLATE VERSION</h1>
+            <h1 class="outline-text">EVENX</h1>
         </a>
     </div>
 
@@ -78,9 +78,15 @@
                         </a>
                     </li>
                     <li class="navbar-item">
+                        <a href="#projects" class="navbar-link hover-underline" data-nav-link>
+                            <div class="separator"></div>
+                            <span class="span">Projects</span>
+                        </a>
+                    </li>
+                    <li class="navbar-item">
                         <a href="#contact" class="navbar-link hover-underline" data-nav-link>
                             <div class="separator"></div>
-                            <span class="span">Contact</span>
+                            <span class="span">Contacts</span>
                         </a>
                     </li>
                 </ul>
@@ -141,57 +147,86 @@
     </section>
     <!--hero section end-->
 
-
-
     <!--services-->
-    <section class="section service text-center has-bg-image" aria-label="service" style="background-image: url(./assets/images/pattern.png)">
+    <section class="section service text-center has-bg-image" aria-label="service" id="services" style="background-image: url(./assets/images/pattern.png)">
         <div class="container">
             <p class="section-subtitle label-2">WE CATER END TO END SOLUTIONS</p>
             <h2 class="headline-1 section-title">OUR <span class="outline-text">SERVICES</span></h2>
             <p class="section-text">With a <span class="outline-text">SENIOR TEAM</span> driven by passion and experience, we create for the world… producing with intelligence, creativity, and purpose.</p>
-            <ul class="grid-list">
+            <ul class="service-list">
                 <li>
-                    <div class="service-card">
-                        <a href="" class="has-before hover:shine">
-                            <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
-                            <img src="./assets/images/services1.png" width="285" height="336" loading="lazy" alt="Events Production" class="img-cover">
-                        </figure>
-                        </a>
-                        <div class="card-container">
-                            <h3 class="title-4 card-titile">
-                                <a href="">Event Production</a>
-                            </h3>
-                            <a href="#services" class="btn-text hover-underline label-2">View Services</a>
+                    <div class="service-item">
+                        <div class="service-image">
+                            <img src="./assets/images/services1.png" width="400" height="300" loading="lazy" alt="Events Production" class="img-cover">
+                        </div>
+                        <div class="service-content">
+                            <div class="production-logo-mini">
+                                <div class="logo-text-group-mini">
+                                    <p class="logo-subtitle-mini">SERVICES</p>
+                                    <h3 class="title-2 service-title">Event Production</h3>
+                                </div>
+                                <div class="logo-number-mini">01</div>
+                            </div>
+                            <p class="service-description" style="text-align: justify;"><strong>For over 12 years, we have been producing with passion through our in-house factories and creative teams.</strong></p>
+                            <p class="service-description" style="text-align: justify;">We live and breathe events; collaborating closely with our clients to refine briefs, shape strategies, develop concepts, oversee production, and manage every detail of the experience from start to finish.</p>
+                            <a href="#projects" class="btn-text hover-underline label-2 service-view-project-btn" data-filter="event-production">View Projects</a>
                         </div>
                     </div>
                 </li>
                 <li>
-                    <div class="service-card">
-                        <a href="" class="has-before hover:shine">
-                            <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
-                            <img src="./assets/images/services1.png" width="285" height="336" loading="lazy" alt="Exhibition and Stands" class="img-cover">
-                        </figure>
-                        </a>
-                        <div class="card-container">
-                            <h3 class="title-4 card-titile">
-                                <a href="">Exhibition and Stands</a>
-                            </h3>
-                            <a href="#services" class="btn-text hover-underline label-2">View Services</a>
+                    <div class="service-item">
+                        <div class="service-image">
+                            <img src="./assets/images/services1.png" width="400" height="300" loading="lazy" alt="Exhibition Stands & POSM" class="img-cover">
+                        </div>
+                        <div class="service-content">
+                            <div class="production-logo-mini">
+                                <div class="logo-text-group-mini">
+                                    <p class="logo-subtitle-mini">SERVICES</p>
+                                    <h3 class="title-2 service-title">Exhibition Stands & POSM</h3>
+                                </div>
+                                <div class="logo-number-mini">02</div>
+                            </div>
+                            <p class="service-description" style="text-align: justify;"><strong>Exhibitions are more than structures; they speak volumes.</strong></p>
+                            <p class="service-description" style="text-align: justify;">Every stand tells a story through strategy, concept, journey, and consumer engagement. At Evenx, we create futuristic exhibition models and immerse stand designs that reflect the spirit of the new era while attracting attention and creating meaningdul experiences.</p>
+                            <a href="#projects" class="btn-text hover-underline label-2 service-view-project-btn" data-filter="exhibition">View Projects</a>
                         </div>
                     </div>
                 </li>
                 <li>
-                    <div class="service-card">
-                        <a href="" class="has-before hover:shine">
-                            <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
-                            <img src="./assets/images/services1.png" width="285" height="336" loading="lazy" alt="POSM Experiences" class="img-cover">
-                        </figure>
-                        </a>
-                        <div class="card-container">
-                            <h3 class="title-4 card-titile">
-                                <a href="">POSM Experiences</a>
-                            </h3>
-                            <a href="#services" class="btn-text hover-underline label-2">View Services</a>
+                    <div class="service-item">
+                        <div class="service-image">
+                            <img src="./assets/images/services1.png" width="400" height="300" loading="lazy" alt="Brand Campaigns & Stories" class="img-cover">
+                        </div>
+                        <div class="service-content">
+                            <div class="production-logo-mini">
+                                <div class="logo-text-group-mini">
+                                    <p class="logo-subtitle-mini">SERVICES</p>
+                                    <h3 class="title-2 service-title">Brand Campaigns & Stories</h3>
+                                </div>
+                                <div class="logo-number-mini">03</div>
+                            </div>
+                            <p class="service-description" style="text-align: justify;"><strong>We excel in branding and brand storytelling, giving life to every identity and building a lasting presence in the market.</strong></p>
+                            <p class="service-description" style="text-align: justify;">We craft brands with personality, purpose, and emotion, ensuring they connect, communicate, and resonate with people in meaningful ways.</p>
+                            <a href="#projects" class="btn-text hover-underline label-2 service-view-project-btn" data-filter="branding">View Projects</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="service-item">
+                        <div class="service-image">
+                            <img src="./assets/images/services1.png" width="400" height="300" loading="lazy" alt="Digital & Cinema Creation" class="img-cover">
+                        </div>
+                        <div class="service-content">
+                            <div class="production-logo-mini">
+                                <div class="logo-text-group-mini">
+                                    <p class="logo-subtitle-mini">SERVICES</p>
+                                    <h3 class="title-2 service-title">Digital & Cinema Creation</h3>
+                                </div>
+                                <div class="logo-number-mini">04</div>
+                            </div>
+                            <p class="service-description" style="text-align: justify;"><strong>We produce digital content, social media campaigns, and cinematic productions alongside directors and international creative teams.</strong></p>
+                            <p class="service-description" style="text-align: justify;">From storytelling to strategy, we help brands expand their market presence, maximize outreach, and drive impactful lead generation through powerful visual communication.</p>
+                            <a href="#projects" class="btn-text hover-underline label-2 service-view-project-btn" data-filter="digital">View Projects</a>
                         </div>
                     </div>
                 </li>
@@ -243,115 +278,112 @@
     <!--about partners end-->
 
 
-    <!--services-->
-    <section class="section menu has-bg-image text-center" aria-label="menu-label" id="services" style="background-image: url(./assets/images/pattern.png)">
+    <!--projects-->
+    <section class="section menu has-bg-image text-center" aria-label="menu-label" id="projects" style="background-image: url(./assets/images/pattern.png)">
         <div class="container">
-            <h2 class="headline-1 section-title text-center">SERVICES</h2>
+            <h2 class="headline-1 section-title text-center">OUR <span class="outline-text">PROJECTS</span></h2>
     
-    <!--image carousel section-->
-    <section class="carousel-section" aria-label="image gallery" id="gallery">
-        <div class="carousel-container">
-            <div class="carousel-wrapper">
-                <div class="carousel-track" data-carousel-track>
-                    <div class="carousel-slide active" data-carousel-slide>
-                        <div class="carousel-image-wrapper">
-                            <img src="./assets/images/serviceimg.png" alt="Event Showcase 1" class="carousel-image">
-                        </div>
-                        <div class="carousel-caption">
-                            <h3 class="carousel-title">EVENT <span class="outline-text">PRODUCTION</span></h3>
-                            <p class="carousel-description"><strong>For over 12 years</strong>, we have been producing with <strong>passion</strong> through our <strong>in-house factories and creative teams.</strong></p>
-                            <p class="carousel-description">description here.</p>
+    <!--filtered gallery section-->
+    <section class="gallery-section" aria-label="filtered image gallery" id="gallery">
+        <div class="gallery-container">
+            <!--filter buttons-->
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="event-production">Event Production</button>
+                <button class="filter-btn" data-filter="exhibition">Exhibition Stands & POSM</button>
+                <button class="filter-btn" data-filter="branding">Brand Campaigns & Stories</button>
+                <button class="filter-btn" data-filter="digital">Digital & Cinema Creation</button>
+            </div>
 
-                        </div>
+            <!--gallery grid-->
+            <div class="gallery-grid" data-gallery-grid>
+                <!-- Event Production Images -->
+                <div class="gallery-item" data-category="event-production">
+                    <img src="./assets/images/serviceimg.png" alt="Event Production 1" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-category">Event Production</div>
                     </div>
-                    <div class="carousel-slide" data-carousel-slide>
-                        <div class="carousel-image-wrapper">
-                            <img src="./assets/images/serviceimg.png" alt="Event Showcase 2" class="carousel-image">
-                        </div>
-                        <div class="carousel-caption">
-                            <h3 class="carousel-title">TITLE <span class="outline-text">BRENT</span></h3>
-                            <p class="carousel-description"><strong>strong description</strong></p>
-                            <p class="carousel-description">description here.</p>
-                        </div>
+                </div>
+                <div class="gallery-item" data-category="event-production">
+                    <img src="./assets/images/serviceimg.png" alt="Event Production 2" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-category">Event Production</div>
                     </div>
-                    <div class="carousel-slide" data-carousel-slide>
-                        <div class="carousel-image-wrapper">
-                            <img src="./assets/images/serviceimg.png" alt="Event Showcase 3" class="carousel-image">
-                        </div>
-                        <div class="carousel-caption">
-                            <h3 class="carousel-title">TITLE <span class="outline-text">BRENT</span></h3>
-                            <p class="carousel-description"><strong>strong description</strong></p>
-                            <p class="carousel-description">description here.</p>
-                        </div>
+                </div>
+                <div class="gallery-item" data-category="event-production">
+                    <img src="./assets/images/serviceimg.png" alt="Event Production 3" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-category">Event Production</div>
                     </div>
-                    <div class="carousel-slide" data-carousel-slide>
-                        <div class="carousel-image-wrapper">
-                            <img src="./assets/images/serviceimg.png" alt="Event Showcase 4" class="carousel-image">
-                        </div>
-                        <div class="carousel-caption">
-                            <h3 class="carousel-title">TITLE <span class="outline-text">BRENT</span></h3>
-                            <p class="carousel-description"><strong>strong description</strong></p>
-                            <p class="carousel-description">description here.</p>
-                        </div>
+                </div>
+
+                <!-- Exhibition Stands Images -->
+                <div class="gallery-item" data-category="exhibition">
+                    <img src="./assets/images/serviceimg.png" alt="Exhibition 1" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-category">Exhibition Stands</div>
                     </div>
-                                        <div class="carousel-slide" data-carousel-slide>
-                        <div class="carousel-image-wrapper">
-                            <img src="./assets/images/serviceimg.png" alt="Event Showcase 5" class="carousel-image">
-                        </div>
-                        <div class="carousel-caption">
-                            <h3 class="carousel-title">TITLE <span class="outline-text">BRENT</span></h3>
-                            <p class="carousel-description"><strong>strong description</strong></p>
-                            <p class="carousel-description">description here.</p>
-                        </div>
+                </div>
+                <div class="gallery-item" data-category="exhibition">
+                    <img src="./assets/images/serviceimg.png" alt="Exhibition 2" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-category">Exhibition Stands</div>
                     </div>
-                                        <div class="carousel-slide" data-carousel-slide>
-                        <div class="carousel-image-wrapper">
-                            <img src="./assets/images/serviceimg.png" alt="Event Showcase 6" class="carousel-image">
-                        </div>
-                        <div class="carousel-caption">
-                            <h3 class="carousel-title">TITLE <span class="outline-text">BRENT</span></h3>
-                            <p class="carousel-description"><strong>strong description</strong></p>
-                            <p class="carousel-description">description here.</p>
-                        </div>
+                </div>
+                <div class="gallery-item" data-category="exhibition">
+                    <img src="./assets/images/serviceimg.png" alt="Exhibition 3" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-category">Exhibition Stands</div>
                     </div>
-                                        <div class="carousel-slide" data-carousel-slide>
-                        <div class="carousel-image-wrapper">
-                            <img src="./assets/images/serviceimg.png" alt="Event Showcase 7" class="carousel-image">
-                        </div>
-                        <div class="carousel-caption">
-                            <h3 class="carousel-title">TITLE <span class="outline-text">BRENT</span></h3>
-                            <p class="carousel-description"><strong>strong description</strong></p>
-                            <p class="carousel-description">description here.</p>
-                        </div>
+                </div>
+
+                <!-- Brand Campaigns Images -->
+                <div class="gallery-item" data-category="branding">
+                    <img src="./assets/images/serviceimg.png" alt="Brand Campaign 1" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-category">Brand Campaigns</div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="branding">
+                    <img src="./assets/images/serviceimg.png" alt="Brand Campaign 2" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-category">Brand Campaigns</div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="branding">
+                    <img src="./assets/images/serviceimg.png" alt="Brand Campaign 3" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-category">Brand Campaigns</div>
+                    </div>
+                </div>
+
+                <!-- Digital & Cinema Images -->
+                <div class="gallery-item" data-category="digital">
+                    <img src="./assets/images/serviceimg.png" alt="Digital Content 1" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-category">Digital & Cinema</div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="digital">
+                    <img src="./assets/images/serviceimg.png" alt="Digital Content 2" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-category">Digital & Cinema</div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="digital">
+                    <img src="./assets/images/pattern.png" alt="Digital Content 3" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <div class="gallery-category">Digital & Cinema</div>
                     </div>
                 </div>
             </div>
-
-            <!--carousel navigation dots-->
-            <div class="carousel-dots" data-carousel-dots>
-                <button class="dot active" data-dot="0" aria-label="Go to slide 1"></button>
-                <button class="dot" data-dot="1" aria-label="Go to slide 2"></button>
-                <button class="dot" data-dot="2" aria-label="Go to slide 3"></button>
-                <button class="dot" data-dot="3" aria-label="Go to slide 4"></button>
-                <button class="dot" data-dot="4" aria-label="Go to slide 5"></button>
-                <button class="dot" data-dot="5" aria-label="Go to slide 6"></button>
-                <button class="dot" data-dot="6" aria-label="Go to slide 7"></button>
-            </div>
-
-            <!--carousel controls-->
-            <button class="carousel-btn carousel-prev" aria-label="Previous slide" data-carousel-prev>
-                <ion-icon name="chevron-back-outline"></ion-icon>
-            </button>
-            <button class="carousel-btn carousel-next" aria-label="Next slide" data-carousel-next>
-                <ion-icon name="chevron-forward-outline"></ion-icon>
-            </button>
         </div>
     </section>
-    <!--image carousel section end-->
+    <!--filtered gallery section end-->
             
         </div>
     </section>
-    <!--menu section end-->
+    <!--projects section end-->
 
 
 
@@ -388,7 +420,10 @@
                         <a href="#partners" class="label-2 footer-link hover-underline">Partners</a>
                     </li>
                     <li>
-                        <a href="#contact" class="label-2 footer-link hover-underline">Contact</a>
+                        <a href="#projects" class="label-2 footer-link hover-underline">Projects</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="label-2 footer-link hover-underline">Contacts</a>
                     </li>
                 </ul>
                 <ul class="footer-list">
@@ -419,6 +454,29 @@
 
 <!-----scripts links----->
 <script src="script.js"></script>
+<script>
+// Service View Projects button filtering
+document.addEventListener('DOMContentLoaded', function() {
+    const serviceBtns = document.querySelectorAll('.service-view-project-btn');
+    serviceBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            const filter = this.getAttribute('data-filter');
+            // Scroll to projects section
+            const projectsSection = document.getElementById('projects');
+            if (projectsSection) {
+                projectsSection.scrollIntoView({ behavior: 'smooth' });
+            }
+            // Wait for scroll, then filter
+            setTimeout(() => {
+                const filterBtn = document.querySelector(`.gallery-filters .filter-btn[data-filter='${filter}']`);
+                if (filterBtn) filterBtn.click();
+            }, 500);
+            // Prevent default anchor jump
+            e.preventDefault();
+        });
+    });
+});
+</script>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 

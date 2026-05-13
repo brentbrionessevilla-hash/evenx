@@ -138,131 +138,244 @@ const dots = document.querySelectorAll("[data-dot]");
 const carouselPrevBtn = document.querySelector("[data-carousel-prev]");
 const carouselNextBtn = document.querySelector("[data-carousel-next]");
 
-let currentSlide = 0;
-let autoPlayInterval;
-const slideCount = carouselSlides.length;
+if (carouselTrack && carouselSlides.length && dots.length && carouselPrevBtn && carouselNextBtn) {
+    let currentSlide = 0;
+    let autoPlayInterval;
+    const slideCount = carouselSlides.length;
 
-// Update carousel position
-const updateCarousel = function() {
-    // Translate carousel track to show current slide
-    const translateX = -currentSlide * 100;
-    carouselTrack.style.transform = `translateX(${translateX}%)`;
-    
-    carouselSlides.forEach((slide, index) => {
-        slide.classList.remove("active");
-        if (index === currentSlide) {
-            slide.classList.add("active");
-        }
-    });
+    // Update carousel position
+    const updateCarousel = function() {
+        const translateX = -currentSlide * 100;
+        carouselTrack.style.transform = `translateX(${translateX}%)`;
 
-    dots.forEach((dot, index) => {
-        dot.classList.remove("active");
-        if (index === currentSlide) {
-            dot.classList.add("active");
-        }
-    });
-};
+        carouselSlides.forEach((slide, index) => {
+            slide.classList.remove("active");
+            if (index === currentSlide) {
+                slide.classList.add("active");
+            }
+        });
 
-// Next slide
-const nextSlide = function() {
-    currentSlide = (currentSlide + 1) % slideCount;
-    updateCarousel();
-};
+        dots.forEach((dot, index) => {
+            dot.classList.remove("active");
+            if (index === currentSlide) {
+                dot.classList.add("active");
+            }
+        });
+    };
 
-// Previous slide
-const prevSlide = function() {
-    currentSlide = (currentSlide - 1 + slideCount) % slideCount;
-    updateCarousel();
-};
+    const nextSlide = function() {
+        currentSlide = (currentSlide + 1) % slideCount;
+        updateCarousel();
+    };
 
-// Go to specific slide
-const goToSlide = function(index) {
-    currentSlide = index;
-    updateCarousel();
-};
+    const prevSlide = function() {
+        currentSlide = (currentSlide - 1 + slideCount) % slideCount;
+        updateCarousel();
+    };
 
-// Auto play
-const startAutoPlay = function() {
-    autoPlayInterval = setInterval(nextSlide, 5000);
-};
+    const goToSlide = function(index) {
+        currentSlide = index;
+        updateCarousel();
+    };
 
-const stopAutoPlay = function() {
-    clearInterval(autoPlayInterval);
-};
+    const startAutoPlay = function() {
+        autoPlayInterval = setInterval(nextSlide, 5000);
+    };
 
-// Event listeners for buttons
-carouselNextBtn.addEventListener("click", function() {
-    stopAutoPlay();
-    nextSlide();
-    startAutoPlay();
-});
+    const stopAutoPlay = function() {
+        clearInterval(autoPlayInterval);
+    };
 
-carouselPrevBtn.addEventListener("click", function() {
-    stopAutoPlay();
-    prevSlide();
-    startAutoPlay();
-});
-
-// Event listeners for dots
-dots.forEach((dot) => {
-    dot.addEventListener("click", function() {
-        const dotIndex = parseInt(this.dataset.dot);
-        stopAutoPlay();
-        goToSlide(dotIndex);
-        startAutoPlay();
-    });
-});
-
-// Mouse hover to pause auto play
-carouselTrack.addEventListener("mouseenter", stopAutoPlay);
-carouselTrack.addEventListener("mouseleave", startAutoPlay);
-
-// Keyboard navigation
-document.addEventListener("keydown", function(event) {
-    if (event.key === "ArrowLeft") {
-        stopAutoPlay();
-        prevSlide();
-        startAutoPlay();
-    }
-    if (event.key === "ArrowRight") {
+    carouselNextBtn.addEventListener("click", function() {
         stopAutoPlay();
         nextSlide();
         startAutoPlay();
-    }
-});
+    });
 
-// Touch/Swipe support for mobile
-let touchStartX = 0;
-let touchEndX = 0;
+    carouselPrevBtn.addEventListener("click", function() {
+        stopAutoPlay();
+        prevSlide();
+        startAutoPlay();
+    });
 
-carouselTrack.addEventListener("touchstart", function(event) {
-    touchStartX = event.changedTouches[0].screenX;
-    stopAutoPlay();
-});
+    dots.forEach((dot) => {
+        dot.addEventListener("click", function() {
+            const dotIndex = parseInt(this.dataset.dot);
+            stopAutoPlay();
+            goToSlide(dotIndex);
+            startAutoPlay();
+        });
+    });
 
-carouselTrack.addEventListener("touchend", function(event) {
-    touchEndX = event.changedTouches[0].screenX;
-    handleSwipe();
-    startAutoPlay();
-});
+    carouselTrack.addEventListener("mouseenter", stopAutoPlay);
+    carouselTrack.addEventListener("mouseleave", startAutoPlay);
 
-const handleSwipe = function() {
-    const swipeThreshold = 50;
-    const diff = touchStartX - touchEndX;
-
-    if (Math.abs(diff) > swipeThreshold) {
-        if (diff > 0) {
-            nextSlide();
-        } else {
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "ArrowLeft") {
+            stopAutoPlay();
             prevSlide();
+            startAutoPlay();
         }
-    }
-};
+        if (event.key === "ArrowRight") {
+            stopAutoPlay();
+            nextSlide();
+            startAutoPlay();
+        }
+    });
 
-// Initialize carousel
-updateCarousel();
-startAutoPlay();
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    carouselTrack.addEventListener("touchstart", function(event) {
+        touchStartX = event.changedTouches[0].screenX;
+        stopAutoPlay();
+    });
+
+    carouselTrack.addEventListener("touchend", function(event) {
+        touchEndX = event.changedTouches[0].screenX;
+        handleSwipe();
+        startAutoPlay();
+    });
+
+    const handleSwipe = function() {
+        const swipeThreshold = 50;
+        const diff = touchStartX - touchEndX;
+
+        if (Math.abs(diff) > swipeThreshold) {
+            if (diff > 0) {
+                nextSlide();
+            } else {
+                prevSlide();
+            }
+        }
+    };
+
+    updateCarousel();
+    startAutoPlay();
+} else {
+    console.warn("Carousel elements not found. Skipping carousel initialization.");
+}
 
 /*carousel end-----*/
 
+/*GALLERY FILTER*/
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Gallery filter script loaded');
+    
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    
+    console.log('Filter buttons found:', filterBtns.length);
+    console.log('Gallery items found:', galleryItems.length);
+
+    if (filterBtns.length > 0 && galleryItems.length > 0) {
+        filterBtns.forEach((btn, index) => {
+            console.log('Attaching click listener to button:', btn.getAttribute('data-filter'));
+            
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                const filterValue = this.getAttribute('data-filter');
+                console.log('Filter clicked:', filterValue);
+                
+                // Update active button
+                filterBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                console.log('Active button updated');
+                
+                // Filter gallery items
+                galleryItems.forEach(item => {
+                    const category = item.getAttribute('data-category');
+                    
+                    if (filterValue === 'all') {
+                        item.style.display = 'block';
+                        item.classList.remove('hidden');
+                    } else {
+                        if (category === filterValue) {
+                            item.style.display = 'block';
+                            item.classList.remove('hidden');
+                        } else {
+                            item.style.display = 'none';
+                            item.classList.add('hidden');
+                        }
+                    }
+                });
+                console.log('Gallery items filtered');
+            });
+        });
+    } else {
+        console.error('Gallery filter elements not found');
+    }
+});
+
+/*gallery filter end-----*/
+
+/*-----------------------------------*\
+  #GALLERY LIGHTBOX
+\*-----------------------------------*/
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Create lightbox elements
+    const lightbox = document.createElement('div');
+    lightbox.className = 'lightbox';
+    lightbox.innerHTML = `
+        <div class="lightbox-overlay"></div>
+        <div class="lightbox-content">
+            <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+            <img class="lightbox-image" src="" alt="">
+        </div>
+    `;
+    document.body.appendChild(lightbox);
+
+    const lightboxOverlay = lightbox.querySelector('.lightbox-overlay');
+    const lightboxContent = lightbox.querySelector('.lightbox-content');
+    const lightboxImage = lightbox.querySelector('.lightbox-image');
+    const lightboxClose = lightbox.querySelector('.lightbox-close');
+
+    let currentImageSrc = '';
+
+    // Function to open lightbox
+    const openLightbox = function(src) {
+        currentImageSrc = src;
+        lightboxImage.src = src;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    };
+
+    // Function to close lightbox
+    const closeLightbox = function() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
+        // Clear image src after animation
+        setTimeout(() => {
+            lightboxImage.src = '';
+        }, 300);
+    };
+
+    // Add click event to gallery images
+    const galleryImages = document.querySelectorAll('.gallery-image');
+    galleryImages.forEach(img => {
+        img.addEventListener('click', function() {
+            const src = this.src;
+            openLightbox(src);
+        });
+    });
+
+    // Close lightbox events
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightboxOverlay.addEventListener('click', closeLightbox);
+
+    // Close on ESC key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+            closeLightbox();
+        }
+    });
+
+    // Prevent closing when clicking on the image itself
+    lightboxImage.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+});
+
+/*lightbox end-----*/
 
